@@ -1,39 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
+//Assembly to enable log4net
 [assembly: log4net.Config.XmlConfigurator(ConfigFile = "Log4Net.config", Watch = true)]
 
 namespace BookStoreService
 {
 
-    public class BookStore : IBookStore
+    public partial class BookStore : IBookStore
     {
-
         private static readonly log4net.ILog Logger =
             log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         private const string BookListLocation = "books.txt";
         // ReSharper disable once FieldCanBeMadeReadOnly.Local
         private List<Book> _booklist;
+        private readonly string _path;
 
         public BookStore()
         {
-            Logger.Info("Calling theBookStore Constructor");
+            _path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, BookListLocation);
+            Logger.Info("Calling the BookStore Constructor");
             _booklist = new List<Book>();
             // Read the file and display it line by line.
-            Logger.Info("opening the filestream");
-            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory , BookListLocation);
-            Logger.Info(path);
-            var file = new StreamReader(path);
-            string line;
-            while ((line = file.ReadLine()) != null)
+            if (!WriteFileToList(_booklist, _path))
             {
-                string[] result = line.Split(',');
-                _booklist.Add(CreateBook(result));
-            }
+                Logger.Error("Bookstore Service constructor failed");
 
-            file.Close();     
+            }
         }
 
         public List<Book> GetAllBooks()
@@ -44,33 +40,35 @@ namespace BookStoreService
         public bool AddBook(string id, string bookName, string author, string year, string price, string stock)
         {
             //add to the list
+            Logger.Info("Adding book to the booklist");
             string[] inputparams = {id,bookName,author,year,price,stock};
             _booklist.Add(CreateBook(inputparams));
-            //create our string to add to the file
-            string newBook = "\r\n" + id + "," + bookName + "," + author + "," + year + ",$" + price + "," + stock;
+
+            //clear the contents of the file then rewrite the list to file
+            // ReSharper disable once SuggestVarOrType_BuiltInTypes
             try
             {
-                //write it to file
-                using (var fs = new FileStream(BookListLocation, FileMode.Append, FileAccess.Write))
-                using (var sw = new StreamWriter(fs))
-                {
-                    sw.WriteLine(newBook);
-                sw.Close();
-                fs.Close();
-                }
+                return ClearFileContents(_path) && WriteListToFile(_booklist,_path);
             }
+
             catch (Exception e)
             {
                 Logger.Error("FileWriter Failed to add Book Record");
                 Logger.Error(e.StackTrace);
                 return false;
             }
-            return true;
         }
         
         public bool DeleteBook(string field, string value)
         {
-            throw new NotImplementedException();
+             var names = _booklist.Select(x => x.GetType().GetProperty(field).GetValue(x));
+            Logger.Info("Delete Method is" + names);
+            foreach (var q in names)
+            {
+                Logger.Info(q.ToString());
+            }
+            return true;
+
         }
 
         public List<Book> SearchBooks(string field, string value)
@@ -94,4 +92,5 @@ namespace BookStoreService
 
         }
     }
+
 }

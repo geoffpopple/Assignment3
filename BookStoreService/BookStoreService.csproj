@@ -105,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Book.cs" />
+    <Compile Include="BookStore.cs" />
     <Compile Include="BookStore.svc.cs">
       <DependentUpon>BookStore.svc</DependentUpon>
     </Compile>
