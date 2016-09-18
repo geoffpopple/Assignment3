@@ -2,23 +2,35 @@
 using System.Collections.Generic;
 using System.IO;
 
+[assembly: log4net.Config.XmlConfigurator(ConfigFile = "Log4Net.config", Watch = true)]
+
 namespace BookStoreService
 {
+
     public class BookStore : IBookStore
     {
-        private const string BookListLocation = @"\\Mac\\Home\\Downloads\\books.txt";
-            List<Book> _booklist=null;
+
+        private static readonly log4net.ILog Logger =
+            log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+        private const string BookListLocation = "books.txt";
+        // ReSharper disable once FieldCanBeMadeReadOnly.Local
+        private List<Book> _booklist;
 
         public BookStore()
         {
+            Logger.Info("Calling theBookStore Constructor");
             _booklist = new List<Book>();
             // Read the file and display it line by line.
-            var file = new StreamReader(BookListLocation);
+            Logger.Info("opening the filestream");
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory , BookListLocation);
+            Logger.Info(path);
+            var file = new StreamReader(path);
             string line;
             while ((line = file.ReadLine()) != null)
             {
                 string[] result = line.Split(',');
-                _booklist.Add(createBook(result));
+                _booklist.Add(CreateBook(result));
             }
 
             file.Close();     
@@ -33,7 +45,7 @@ namespace BookStoreService
         {
             //add to the list
             string[] inputparams = {id,bookName,author,year,price,stock};
-            _booklist.Add(createBook(inputparams));
+            _booklist.Add(CreateBook(inputparams));
             //create our string to add to the file
             string newBook = "\r\n" + id + "," + bookName + "," + author + "," + year + ",$" + price + "," + stock;
             try
@@ -47,8 +59,10 @@ namespace BookStoreService
                 fs.Close();
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Logger.Error("FileWriter Failed to add Book Record");
+                Logger.Error(e.StackTrace);
                 return false;
             }
             return true;
@@ -64,8 +78,9 @@ namespace BookStoreService
             throw new NotImplementedException();
         }
 
-        private Book createBook(string[] result)
+        private static Book CreateBook(IReadOnlyList<string> result)
         {
+            // ReSharper disable once SuggestVarOrType_SimpleTypes
             Book newBook = new Book
             {
                 Id = result[0],
