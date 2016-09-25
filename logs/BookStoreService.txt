@@ -1,24 +1,14 @@
-15:17:40,367 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
-15:17:40,377 [BookStoreService.BookStore] INFO - opening the filestream
-15:17:40,379 [BookStoreService.BookStore] INFO - \\mac\home\Documents\Visual Studio 2015\Projects\Assignment3\BookStoreServiceTest\bin\Debug\books.txt
-15:46:24,912 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
-15:46:24,922 [BookStoreService.BookStore] INFO - opening the filestream
-15:46:24,922 [BookStoreService.BookStore] INFO - \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt
-15:46:24,926 [BookStoreService.BookStore] INFO - Delete Method isSystem.Linq.Enumerable+WhereSelectListIterator`2[BookStoreService.Book,System.Object]
-16:04:24,775 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
-16:04:24,876 [BookStoreService.BookStore] INFO - opening the filestream
-16:04:24,898 [BookStoreService.BookStore] INFO - \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt
-16:04:24,908 [BookStoreService.BookStore] INFO - Delete Method isSystem.Linq.Enumerable+WhereSelectListIterator`2[BookStoreService.Book,System.Object]
-16:04:24,915 [BookStoreService.BookStore] INFO - 2009
-16:04:24,919 [BookStoreService.BookStore] INFO - 2005
-16:04:24,923 [BookStoreService.BookStore] INFO - 2007
-16:04:24,924 [BookStoreService.BookStore] INFO - 2007
-16:04:24,933 [BookStoreService.BookStore] INFO - 2012
-16:04:24,936 [BookStoreService.BookStore] INFO - 2012
-16:04:24,936 [BookStoreService.BookStore] INFO - 2009
-19:31:12,166 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
-19:31:12,193 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
-19:31:45,250 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
-19:31:45,250 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
-19:31:45,254 [BookStoreService.BookStore] INFO - Adding book to the booklist
-19:31:45,261 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for writing 
+09:20:36,475 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+09:20:36,487 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+09:20:36,490 [BookStoreService.BookStore] INFO - Duplicate book ID found ID entered is 0470376848, item in db is 4321
+09:24:33,726 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+09:24:33,737 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+09:25:11,111 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+09:25:11,112 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+09:25:11,119 [BookStoreService.BookStore] INFO - Adding book to the booklist
+09:25:11,124 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for writing 
+09:25:19,766 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+09:25:19,776 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+09:26:13,425 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+09:26:13,425 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+09:26:13,436 [BookStoreService.BookStore] INFO - Duplicate book ID found ID entered is 54321, item in db is 54321

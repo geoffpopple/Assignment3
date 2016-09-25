@@ -6,7 +6,6 @@ namespace BookStoreService
     [ServiceContract]
     public interface IBookStore
     {
-
         [OperationContract]
         List<Book> GetAllBooks();
 

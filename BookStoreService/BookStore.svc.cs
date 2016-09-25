@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+//using System.Linq.Expressions;
 
 //Assembly to enable log4net
+
 [assembly: log4net.Config.XmlConfigurator(ConfigFile = "Log4Net.config", Watch = true)]
 
 namespace BookStoreService
@@ -28,47 +30,43 @@ namespace BookStoreService
             if (!WriteFileToList(_booklist, _path))
             {
                 Logger.Error("Bookstore Service constructor failed");
-
             }
         }
 
         public List<Book> GetAllBooks()
-        {  
+        {
             return _booklist;
         }
 
         public bool AddBook(string id, string bookName, string author, string year, string price, string stock)
         {
-            //add to the list
-            Logger.Info("Adding book to the booklist");
-            string[] inputparams = {id,bookName,author,year,price,stock};
-            _booklist.Add(CreateBook(inputparams));
-
-            //clear the contents of the file then rewrite the list to file
-            // ReSharper disable once SuggestVarOrType_BuiltInTypes
-            try
+            if (ValidateUniqueId(id))
             {
-                return ClearFileContents(_path) && WriteListToFile(_booklist,_path);
-            }
+                //add to the list
+                Logger.Info("Adding book to the booklist");
+                string[] inputparams = {id, bookName, author, year, price, stock};
+                _booklist.Add(CreateBook(inputparams));
 
-            catch (Exception e)
-            {
-                Logger.Error("FileWriter Failed to add Book Record");
-                Logger.Error(e.StackTrace);
-                return false;
+                //clear the contents of the file then rewrite the list to file
+                // ReSharper disable once SuggestVarOrType_BuiltInTypes
+                try
+                {
+                    return ClearFileContents(_path) && WriteListToFile(_booklist, _path);
+                }
+
+                catch (Exception e)
+                {
+                    Logger.Error("FileWriter Failed to add Book Record");
+                    Logger.Error(e.StackTrace);
+                    return false;
+                }
             }
+            return false;
         }
-        
-        public bool DeleteBook(string field, string value)
-        {
-             var names = _booklist.Select(x => x.GetType().GetProperty(field).GetValue(x));
-            Logger.Info("Delete Method is" + names);
-            foreach (var q in names)
-            {
-                Logger.Info(q.ToString());
-            }
-            return true;
 
+        public bool DeleteBook(string field, string value)
+       {
+            return true;
         }
 
         public List<Book> SearchBooks(string field, string value)
@@ -91,6 +89,36 @@ namespace BookStoreService
             return newBook;
 
         }
+        public IList<Book> FilterByYear(string name)
+        {
+            return _booklist.Where(p => p.Year != Convert.ToInt32(name)).ToList();
+        }
+
+        public IList<Book> FilterById(string id)
+        {
+            return _booklist.Where(p => p.Id == id).ToList();
+        }
+
+        public IList<Book> FilterByposition(string id)
+        {
+            return _booklist.Where(p => p.Id == id).ToList();
+        }
+
+       private  bool ValidateUniqueId(string id)
+        {
+            List<Book> books = GetAllBooks();
+            foreach (Book book in books)
+            {
+                if(book.Id == id)
+                {
+                    Logger.Info($"Duplicate book ID found ID entered is {id}, item in db is {book.Id}");
+                    return false;
+
+                }
+            }
+            return true;
+        }
     }
 
 }
+
