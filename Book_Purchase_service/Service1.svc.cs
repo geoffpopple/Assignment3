@@ -1,27 +1,43 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
+using Book_Purchase_service.ServiceReference1;
 
 namespace Book_Purchase_service
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
-    // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
-    public class BookPuchaseSrv : IBookPurchasesvc
+   public class BookPuchaseSrv : IBookPurchasesvc    
     {
         public BookPurchaseResponse PurchaseBooks(BookPurchaseInfo info)
         {
             //Get the List of Books from the BookStore service
-            ServiceReference1.BookStoreClient bookstore = new ServiceReference1.BookStoreClient();
+            BookStoreClient bookstore = new BookStoreClient();
             var books = bookstore.GetAllBooks();
-
             //setup some helper vars
             float myBudget = info.budget;
-            var totalCost = info.items.Skip(1).Sum(v => v.Key * v.Value);
-            //
-            if (totalCost > myBudget)
+            float remainingCash = myBudget;
+            //Create a dictionary from our list to make our life easier using the id as the key
+            Dictionary<int, Book> bookDict = new Dictionary<int, Book>();
+            foreach (Book book in books)
             {
-                return new BookPurchaseResponse(false, "Not Enough Money");
+                bookDict.Add(Convert.ToInt32(book.Id), book);
             }
-                throw new NotImplementedException();
+
+            //look at our purchses one at a time and check we cam fulfil
+            foreach (var purchased in info.items)
+            {
+                //check stock does not exceed the stocklevel
+                if (purchased.Value > bookDict[purchased.Key].Stock)
+                {
+                    return new BookPurchaseResponse(false, "Not enough stock");
+                }
+                else
+                {
+                    //Deduct the cost from our running total and check we have not blown the budget
+                    remainingCash -= purchased.Value * bookDict[purchased.Key].Price;
+                    if (remainingCash < 0) return new BookPurchaseResponse(false, "Not enough Money");
+                }
+            }
+            return new BookPurchaseResponse(true, Convert.ToString(remainingCash));
         }
+
     }
 }

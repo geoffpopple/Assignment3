@@ -25,9 +25,6 @@ namespace BookStoreService
         public BookStore()
         {
             _path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, BookListLocation);
-
-            Logger.Info("Calling the BookStore Constructor");
-
             _booklist = new List<Book>();
 
             // Read the file and display it line by line.
