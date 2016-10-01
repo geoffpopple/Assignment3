@@ -1,14 +1,314 @@
-09:20:36,475 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
-09:20:36,487 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
-09:20:36,490 [BookStoreService.BookStore] INFO - Duplicate book ID found ID entered is 0470376848, item in db is 4321
-09:24:33,726 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
-09:24:33,737 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
-09:25:11,111 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
-09:25:11,112 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
-09:25:11,119 [BookStoreService.BookStore] INFO - Adding book to the booklist
-09:25:11,124 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for writing 
-09:25:19,766 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
-09:25:19,776 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
-09:26:13,425 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
-09:26:13,425 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
-09:26:13,436 [BookStoreService.BookStore] INFO - Duplicate book ID found ID entered is 54321, item in db is 54321
+13:35:24,891 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+13:35:24,900 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+13:35:24,919 [BookStoreService.BookStore] WARN - Fielsd or value are not valid
+13:38:47,469 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+13:38:47,481 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+13:38:47,501 [BookStoreService.BookStore] WARN - Field or value are not valid, calling code should handle error
+13:39:07,147 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+13:39:07,147 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+13:39:17,265 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+13:39:17,265 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+14:57:45,758 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+14:57:45,771 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+14:58:06,859 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+14:58:06,860 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+14:58:06,910 [BookStoreService.BookStore] WARN - Unable to delete Books
+14:58:14,500 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+14:58:14,501 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+15:01:51,509 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+15:01:51,518 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+15:05:54,649 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+15:05:54,664 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+15:05:54,686 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for writing 
+15:06:06,770 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+15:06:06,785 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+15:06:29,549 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+15:06:29,549 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+15:06:29,564 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for writing 
+15:06:40,471 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+15:06:40,482 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+15:25:24,834 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+15:25:24,846 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+15:25:24,855 [BookStoreService.BookStore] INFO - Adding book to the booklist
+15:25:24,858 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for writing 
+15:25:56,145 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+15:25:56,154 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+15:25:56,157 [BookStoreService.BookStore] INFO - Duplicate book ID found ID entered is 878787, item in db is 878787
+15:26:16,243 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+15:26:16,246 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+15:26:16,250 [BookStoreService.BookStore] INFO - Adding book to the booklist
+16:00:05,960 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:00:05,972 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:00:52,309 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:00:52,309 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:01:09,007 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:01:09,007 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:12:32,930 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:12:32,946 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:13:13,458 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:13:13,481 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:13:13,485 [BookStoreService.BookStore] INFO - Adding book to the booklist
+16:14:27,015 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:14:27,025 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:22:35,370 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:22:35,380 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:24:39,181 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:24:39,190 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:24:45,451 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:24:45,451 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:24:56,827 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:24:56,834 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:26:03,729 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:26:03,738 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:27:44,906 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:27:44,918 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:30:33,145 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:30:33,171 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:30:41,528 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:30:41,529 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:30:53,102 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:30:53,103 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:32:33,661 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:32:33,672 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:38:49,078 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:38:49,090 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:39:08,230 [BookStoreService.BookStore] INFO - Adding book to the booklist
+16:39:27,590 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for writing 
+16:39:55,403 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:39:55,411 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:43:57,524 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:43:57,537 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:44:52,367 [BookStoreService.BookStore] INFO - Adding book to the booklist
+16:44:57,131 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for writing 
+16:45:31,910 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:45:34,371 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:47:55,767 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:47:55,775 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:48:02,296 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:48:02,296 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:48:30,803 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:48:30,803 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:48:30,809 [BookStoreService.BookStore] INFO - Duplicate book ID found ID entered is 86977, item in db is 86977
+16:48:38,842 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:48:38,843 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:48:40,228 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:48:40,229 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:50:12,718 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:50:12,727 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:51:59,896 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:51:59,905 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:52:05,662 [BookStoreService.BookStore] INFO - Adding book to the booklist
+16:52:05,664 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for writing 
+16:52:16,667 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:52:16,692 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:52:16,695 [BookStoreService.BookStore] INFO - Duplicate book ID found ID entered is 456780, item in db is 456780
+16:52:31,177 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:52:31,177 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:52:41,493 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:52:41,494 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:52:45,255 [BookStoreService.BookStore] INFO - Adding book to the booklist
+16:52:45,258 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for writing 
+16:53:06,384 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+16:53:06,394 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+16:53:06,397 [BookStoreService.BookStore] INFO - Duplicate book ID found ID entered is 4567803, item in db is 4567803
+19:09:00,218 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:09:00,233 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:09:00,242 [BookStoreService.BookStore] INFO - Adding book to the booklist
+19:09:00,245 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for writing 
+19:09:18,741 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:09:18,752 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:09:34,066 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:09:34,069 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:09:39,577 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:09:39,578 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:09:46,791 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:09:46,791 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:09:46,793 [BookStoreService.BookStore] INFO - Adding book to the booklist
+19:09:46,795 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for writing 
+19:09:55,829 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:09:55,830 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:09:55,835 [BookStoreService.BookStore] INFO - Duplicate book ID found ID entered is 535356, item in db is 535356
+19:10:04,899 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:10:04,900 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:10:04,902 [BookStoreService.BookStore] INFO - Duplicate book ID found ID entered is 535356, item in db is 535356
+19:10:10,311 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:10:10,311 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:10:10,314 [BookStoreService.BookStore] INFO - Adding book to the booklist
+19:10:10,316 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for writing 
+19:10:24,359 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:10:24,362 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:11:19,425 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:11:19,428 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:11:19,545 [BookStoreService.BookStore] WARN - Field or value are not valid, calling code should handle error
+19:11:19,556 [BookStoreService.BookStore] WARN - empty Book List retuned
+19:11:44,708 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:11:44,709 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:12:13,908 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:12:13,908 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:12:27,482 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:12:27,482 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:12:27,487 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for writing 
+19:12:34,925 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:12:34,933 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:13:54,314 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:13:54,315 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:14:17,604 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:14:17,604 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:14:17,657 [BookStoreService.BookStore] WARN - Field or value are not valid, calling code should handle error
+19:14:17,669 [BookStoreService.BookStore] WARN - empty Book List retuned
+19:14:29,304 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:14:29,305 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:14:29,320 [BookStoreService.BookStore] WARN - Field or value are not valid, calling code should handle error
+19:14:29,334 [BookStoreService.BookStore] WARN - empty Book List retuned
+19:14:38,923 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:14:38,923 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:14:38,937 [BookStoreService.BookStore] WARN - Field or value are not valid, calling code should handle error
+19:14:38,951 [BookStoreService.BookStore] WARN - empty Book List retuned
+19:14:46,531 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:14:46,531 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:55:03,047 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:55:03,056 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:55:03,130 [BookStoreService.BookStore] WARN - Field or value are not valid, calling code should handle error
+19:55:03,145 [BookStoreService.BookStore] WARN - empty Book List retuned
+19:55:10,368 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:55:10,369 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:55:10,388 [BookStoreService.BookStore] WARN - Field or value are not valid, calling code should handle error
+19:55:10,400 [BookStoreService.BookStore] WARN - empty Book List retuned
+19:55:38,214 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:55:38,214 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:55:38,228 [BookStoreService.BookStore] WARN - Field or value are not valid, calling code should handle error
+19:55:38,241 [BookStoreService.BookStore] WARN - empty Book List retuned
+19:58:17,988 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:58:17,997 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:58:18,034 [BookStoreService.BookStore] WARN - Field or value are not valid, calling code should handle error
+19:58:18,046 [BookStoreService.BookStore] WARN - empty Book List retuned
+19:58:23,423 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+19:58:23,424 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+19:58:23,438 [BookStoreService.BookStore] WARN - Field or value are not valid, calling code should handle error
+19:58:23,453 [BookStoreService.BookStore] WARN - empty Book List retuned
+20:00:12,529 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+20:00:12,540 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+20:37:37,290 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+20:37:37,302 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+20:39:10,601 [BookStoreService.BookStore] WARN - Field or value are not valid, calling code should handle error
+20:39:39,561 [BookStoreService.BookStore] WARN - empty Book List retuned
+21:09:15,097 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+21:09:15,112 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+09:40:30,235 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+09:40:30,249 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+09:40:42,880 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+09:40:42,880 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+09:40:42,928 [BookStoreService.BookStore] WARN - Field or value are not valid, calling code should handle error
+09:40:42,940 [BookStoreService.BookStore] WARN - empty Book List retuned
+09:41:01,212 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+09:41:01,216 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:01:21,179 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:01:21,196 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:03:40,512 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:03:40,512 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:04:22,783 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:04:22,784 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:04:32,019 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:04:32,020 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:04:56,019 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:04:56,019 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:13:39,343 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:13:39,355 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:13:44,726 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:13:44,726 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:49:04,879 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:49:04,890 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:49:22,923 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:49:22,925 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:49:35,494 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:49:35,494 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:50:28,855 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:50:28,856 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:50:37,531 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:50:37,531 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:51:15,867 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:51:15,868 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:51:15,877 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for writing 
+13:00:15,702 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+13:00:15,720 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+13:01:48,874 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+13:01:48,876 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+13:02:26,124 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+13:02:26,124 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+13:02:26,217 [BookStoreService.BookStore] WARN - Unable to delete Books
+13:02:45,332 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+13:02:45,333 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+13:02:45,354 [BookStoreService.BookStore] WARN - Unable to delete Books
+13:03:37,284 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+13:03:37,295 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+13:12:33,710 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+13:12:33,721 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+13:16:58,159 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+13:16:58,171 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+13:16:58,209 [BookStoreService.BookStore] WARN - Field or value are not valid, calling code should handle error
+13:16:58,221 [BookStoreService.BookStore] WARN - Unable to delete Books
+13:17:10,669 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+13:17:10,670 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+13:20:58,214 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+13:20:58,223 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+13:21:08,510 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+13:21:08,510 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+13:21:08,541 [BookStoreService.BookStore] WARN - Unable to delete Books
+13:22:05,739 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+13:22:05,748 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+13:23:30,029 [BookStoreService.BookStore] WARN - Unable to delete Books
+13:25:19,438 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+13:25:19,447 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+13:29:16,968 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+13:29:16,980 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+14:11:25,741 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+14:11:25,753 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+14:13:33,206 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+14:13:33,215 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+14:14:08,117 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for writing 
+14:14:18,487 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+14:14:18,496 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+14:24:41,176 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+14:24:41,187 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+14:24:52,409 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+14:24:52,409 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+14:24:52,423 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for writing 
+14:24:58,320 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+14:24:58,331 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:02:10,265 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:02:10,282 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:02:10,357 [BookStoreService.BookStore] WARN - Field or value are not valid, calling code should handle error
+11:02:10,369 [BookStoreService.BookStore] WARN - empty Book List retuned
+11:02:24,308 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:02:24,309 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:02:58,883 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:02:58,883 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:03:38,430 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:03:38,430 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:03:50,304 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:03:50,304 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:06:03,886 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:06:03,896 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:06:16,178 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:06:16,178 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:28:05,905 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:28:05,915 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:28:41,776 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:28:41,776 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:29:30,962 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:29:30,971 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:29:43,946 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:29:43,954 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:37:46,617 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:37:46,626 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:38:36,965 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:38:36,966 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:38:44,280 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:38:44,280 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:38:53,019 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:38:53,019 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:39:13,264 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for writing 
+11:40:07,853 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:40:07,863 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+11:40:15,381 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
+11:40:15,381 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 

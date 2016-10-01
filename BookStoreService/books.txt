@@ -3,6 +3,3 @@
 0485965215,Service-Oriented Architecture: A Field Guide to Integrating XML and Web Services,Thomas Erl,2007,$43.16,1
 0456235975,SOA in Practice: The Art of Distributed System Design,Nicolai M. Josuttis,2007,$24.59,1
 0487965321,SOA Made Simple,Lonneke Dikmans,2012,$13.72,2
-0412359687,SOA with REST: Principles Patterns & Constraints for Building Enterprise Solutions with REST,Thomas Erl,2012,$48.25,3
-012345,iuiuhiuh,ijijpoij,2009,$100.30,3
-05678,My Book,J R Hartley,1999,$19.99,3

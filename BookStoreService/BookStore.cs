@@ -6,7 +6,7 @@ namespace BookStoreService
 {
     public partial class BookStore
     {
-        private bool ClearFileContents(string filename)
+        private static bool ClearFileContents(string filename)
         {
             try
             {
@@ -20,12 +20,12 @@ namespace BookStoreService
             return true;
         }
 
-        private bool WriteListToFile(List<Book> booklist, string filename)
+        private static bool WriteListToFile(IEnumerable<Book> booklist, string filename)
         {
             Logger.Info("opening the filestream " + filename + " for writing ");
             using (var file = new StreamWriter(filename))
             {
-                foreach (Book book in booklist)
+                foreach (var book in booklist)
                 {
                     {
                         string line = $"{book.Id},{book.Name},{book.Author},{book.Year},{book.Price:C2},{book.Stock}";
@@ -37,7 +37,7 @@ namespace BookStoreService
             return true;
         }
 
-        private bool WriteFileToList(List<Book> booklist, string filename)
+        private static bool WriteFileToList(ICollection<Book> booklist, string filename)
         {
             Logger.Info("opening the filestream " + filename + " for reading ");
             StreamReader file = StreamReader.Null;
