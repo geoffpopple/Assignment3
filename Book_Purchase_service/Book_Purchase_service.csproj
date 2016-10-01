@@ -71,7 +71,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Service1.svc" />
+    <Content Include="BookPurchase.svc" />
     <Content Include="Web.config" />
     <None Include="Service References\ServiceReference1\BookStore.wsdl" />
     <None Include="Service References\ServiceReference1\BookStore.xsd">
@@ -92,10 +92,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Service1.svc.cs">
-      <DependentUpon>Service1.svc</DependentUpon>
+    <Compile Include="BookPurchase.svc.cs">
+      <DependentUpon>BookPurchase.svc</DependentUpon>
     </Compile>
-    <Compile Include="IService1.cs" />
+    <Compile Include="IBookPurchase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

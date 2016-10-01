@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using Book_Purchase_service.ServiceReference1;
 
 namespace Book_Purchase_service
@@ -36,7 +37,7 @@ namespace Book_Purchase_service
                     if (remainingCash < 0) return new BookPurchaseResponse(false, "Not enough Money");
                 }
             }
-            return new BookPurchaseResponse(true, Convert.ToString(remainingCash));
+            return new BookPurchaseResponse(true, Convert.ToString(remainingCash, CultureInfo.InvariantCulture));
         }
 
     }
