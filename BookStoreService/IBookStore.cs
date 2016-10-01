@@ -7,15 +7,16 @@ namespace BookStoreService
     public interface IBookStore
     {
         [OperationContract]
+        //comment
         List<Book> GetAllBooks();
 
         [OperationContract]
         bool AddBook(string id, string bookName,string author,string year, string price, string stock);
 
         [OperationContract]
-        bool DeleteBook(string field, string value);
+        bool DeleteBook(DeletableField field, string value);
 
         [OperationContract]
-        List<Book> SearchBooks(string field, string value);
+        List<Book> SearchBooks(SearchableField field, string value);
     }
 }
