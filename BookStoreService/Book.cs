@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 namespace BookStoreService
 {
     [DataContract]
+    //comment
     public enum SearchableField
     {
         [EnumMember]
