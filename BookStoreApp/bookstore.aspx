@@ -37,13 +37,15 @@
     </div>
         Manage Books<br />
         <br />
-        <asp:Button ID="btnAdd" runat="server" Text="Add" ToolTip="Add a book" />
+        <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" Text="Add" ToolTip="Add a book" ValidationGroup="Add" />
 &nbsp;<asp:Label ID="lblID" runat="server" Text="ID"></asp:Label>
         :&nbsp;
         <asp:TextBox ID="txtID" runat="server" Width="85px"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RFV1" runat="server" ControlToValidate="txtID" ErrorMessage="Must Enter an ID" ValidationGroup="Add"></asp:RequiredFieldValidator>
 &nbsp;<asp:Label ID="lblName" runat="server" Text="Name" ToolTip="Book Name"></asp:Label>
         :&nbsp;
         <asp:TextBox ID="txtName" runat="server" Width="169px"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RFV2" runat="server" ControlToValidate="txtName" ErrorMessage="Must Enter a Name" ValidationGroup="Add"></asp:RequiredFieldValidator>
 &nbsp;
         <asp:Label ID="lblAuthor" runat="server" Text="Author"></asp:Label>
         :&nbsp;
@@ -60,6 +62,7 @@
         <asp:Label ID="lblStock" runat="server" Text="Stock"></asp:Label>
         :&nbsp;
         <asp:TextBox ID="txtStock" runat="server" Width="72px"></asp:TextBox>
+        <br />
         <br />
         <br />
         <asp:Button ID="btnDelete" runat="server" Text="Delete" />
