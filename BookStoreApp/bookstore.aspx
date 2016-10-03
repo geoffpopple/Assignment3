@@ -14,7 +14,7 @@
         </asp:ScriptManager>
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
                     <columns>
                       <asp:TemplateField HeaderText="Num">
                     <ItemTemplate>
@@ -41,11 +41,10 @@
 &nbsp;<asp:Label ID="lblID" runat="server" Text="ID"></asp:Label>
         :&nbsp;
         <asp:TextBox ID="txtID" runat="server" Width="85px"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RFV1" runat="server" ControlToValidate="txtID" ErrorMessage="Must Enter an ID" ValidationGroup="Add"></asp:RequiredFieldValidator>
-&nbsp;<asp:Label ID="lblName" runat="server" Text="Name" ToolTip="Book Name"></asp:Label>
+&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="lblName" runat="server" Text="Name" ToolTip="Book Name"></asp:Label>
         :&nbsp;
         <asp:TextBox ID="txtName" runat="server" Width="169px"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RFV2" runat="server" ControlToValidate="txtName" ErrorMessage="Must Enter a Name" ValidationGroup="Add"></asp:RequiredFieldValidator>
 &nbsp;
         <asp:Label ID="lblAuthor" runat="server" Text="Author"></asp:Label>
         :&nbsp;
@@ -54,7 +53,7 @@
         <asp:Label ID="lblYear" runat="server" Text="Year"></asp:Label>
         :&nbsp;
         <asp:TextBox ID="txtYear" runat="server" Width="61px"></asp:TextBox>
-&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lblPrice" runat="server" Text="Price"></asp:Label>
         :&nbsp;
         <asp:TextBox ID="txtPrice" runat="server" Width="57px"></asp:TextBox>
@@ -63,7 +62,24 @@
         :&nbsp;
         <asp:TextBox ID="txtStock" runat="server" Width="72px"></asp:TextBox>
         <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:RequiredFieldValidator ID="RFV1" runat="server" ControlToValidate="txtID" ErrorMessage=" Enter an ID" ValidationGroup="Add"></asp:RequiredFieldValidator>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:RequiredFieldValidator ID="RFV2" runat="server" ControlToValidate="txtName" ErrorMessage="Enter a Name" ValidationGroup="Add"></asp:RequiredFieldValidator>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:RequiredFieldValidator ID="RFV3" runat="server" ControlToValidate="txtAuthor" ErrorMessage="Enter an Author" ValidationGroup="Add"></asp:RequiredFieldValidator>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:RequiredFieldValidator ID="RFV4" runat="server" ControlToValidate="txtYear" ErrorMessage="Enter Year" ValidationGroup="Add"></asp:RequiredFieldValidator>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:RequiredFieldValidator ID="RFV5" runat="server" ControlToValidate="txtPrice" ErrorMessage="Enter Price" ValidationGroup="Add"></asp:RequiredFieldValidator>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+        <asp:RequiredFieldValidator ID="RFV6" runat="server" ControlToValidate="txtStock" ErrorMessage="Enter Stock" ValidationGroup="Add"></asp:RequiredFieldValidator>
         <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="ID must be Unique" OnDataBinding="btnAdd_Click" OnServerValidate="ServerValidation" ValidationGroup="Add" ControlToValidate="txtID"></asp:CustomValidator>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txtYear" ErrorMessage="Only Int &gt;0 &amp; &lt; 2018" MaximumValue="2017" MinimumValue="1" Type="Integer" ValidationGroup="Add"></asp:RangeValidator>
+        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:RangeValidator ID="RangeValidator2" runat="server" ControlToValidate="txtPrice" ErrorMessage="Must be &gt;0" MaximumValue="9999" MinimumValue="0" Type="Double" ValidationGroup="Add"></asp:RangeValidator>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+        <asp:RangeValidator ID="RangeValidator3" runat="server" ControlToValidate="txtStock" ErrorMessage="Must Be Int &gt;0" MaximumValue="9999" MinimumValue="1" Type="Integer" ValidationGroup="Add"></asp:RangeValidator>
         <br />
         <asp:Button ID="btnDelete" runat="server" Text="Delete" />
 &nbsp;<asp:DropDownList ID="dropDelete" runat="server">
@@ -75,7 +91,13 @@
         <br />
         <br />
         <asp:Button ID="btnSearch" runat="server" Text="Search" />
-        <asp:TextBox ID="txtSearch" runat="server" Width="175px"></asp:TextBox>
+        <asp:DropDownList ID="DropDownList1" runat="server">
+            <asp:ListItem>ID</asp:ListItem>
+            <asp:ListItem>Name</asp:ListItem>
+            <asp:ListItem>Author</asp:ListItem>
+            <asp:ListItem>Year</asp:ListItem>
+        </asp:DropDownList>
+        <asp:TextBox ID="txtSearch" runat="server" Width="105px"></asp:TextBox>
         <br />
         <br />
         Purchase Books<br />
@@ -86,13 +108,9 @@
         <br />
         <asp:UpdatePanel ID="UpdatePanel2" runat="server">
             <ContentTemplate>
-                <asp:Label ID="lblBookNumber" runat="server" Text="Book Number"></asp:Label>
-                <asp:TextBox ID="txtBookNumber" runat="server"></asp:TextBox>
-                <asp:Label ID="lblAmount" runat="server" Text="Amount"></asp:Label>
-                <asp:TextBox ID="txtAmount" runat="server"></asp:TextBox>
-                &nbsp;
-                <asp:Button ID="btnMore" runat="server" Text="More" />
+                <asp:Button ID="btnMore" runat="server" OnClick="btnMore_Click" Text="More" />
                 <br />
+                &nbsp;
                 <br />
             </ContentTemplate>
         </asp:UpdatePanel>

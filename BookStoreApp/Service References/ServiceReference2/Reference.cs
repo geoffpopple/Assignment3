@@ -174,10 +174,10 @@ namespace BookStoreApp.ServiceReference2 {
     public interface IBookStore {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookStore/GetAllBooks", ReplyAction="http://tempuri.org/IBookStore/GetAllBooksResponse")]
-        BookStoreApp.ServiceReference2.Book[] GetAllBooks();
+        System.Collections.Generic.List<BookStoreApp.ServiceReference2.Book> GetAllBooks();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookStore/GetAllBooks", ReplyAction="http://tempuri.org/IBookStore/GetAllBooksResponse")]
-        System.Threading.Tasks.Task<BookStoreApp.ServiceReference2.Book[]> GetAllBooksAsync();
+        System.Threading.Tasks.Task<System.Collections.Generic.List<BookStoreApp.ServiceReference2.Book>> GetAllBooksAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookStore/AddBook", ReplyAction="http://tempuri.org/IBookStore/AddBookResponse")]
         bool AddBook(string id, string bookName, string author, string year, string price, string stock);
@@ -192,10 +192,10 @@ namespace BookStoreApp.ServiceReference2 {
         System.Threading.Tasks.Task<bool> DeleteBookAsync(BookStoreApp.ServiceReference2.DeletableField field, string value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookStore/SearchBooks", ReplyAction="http://tempuri.org/IBookStore/SearchBooksResponse")]
-        BookStoreApp.ServiceReference2.Book[] SearchBooks(BookStoreApp.ServiceReference2.SearchableField field, string value);
+        System.Collections.Generic.List<BookStoreApp.ServiceReference2.Book> SearchBooks(BookStoreApp.ServiceReference2.SearchableField field, string value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookStore/SearchBooks", ReplyAction="http://tempuri.org/IBookStore/SearchBooksResponse")]
-        System.Threading.Tasks.Task<BookStoreApp.ServiceReference2.Book[]> SearchBooksAsync(BookStoreApp.ServiceReference2.SearchableField field, string value);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<BookStoreApp.ServiceReference2.Book>> SearchBooksAsync(BookStoreApp.ServiceReference2.SearchableField field, string value);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -225,11 +225,11 @@ namespace BookStoreApp.ServiceReference2 {
                 base(binding, remoteAddress) {
         }
         
-        public BookStoreApp.ServiceReference2.Book[] GetAllBooks() {
+        public System.Collections.Generic.List<BookStoreApp.ServiceReference2.Book> GetAllBooks() {
             return base.Channel.GetAllBooks();
         }
         
-        public System.Threading.Tasks.Task<BookStoreApp.ServiceReference2.Book[]> GetAllBooksAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<BookStoreApp.ServiceReference2.Book>> GetAllBooksAsync() {
             return base.Channel.GetAllBooksAsync();
         }
         
@@ -249,11 +249,11 @@ namespace BookStoreApp.ServiceReference2 {
             return base.Channel.DeleteBookAsync(field, value);
         }
         
-        public BookStoreApp.ServiceReference2.Book[] SearchBooks(BookStoreApp.ServiceReference2.SearchableField field, string value) {
+        public System.Collections.Generic.List<BookStoreApp.ServiceReference2.Book> SearchBooks(BookStoreApp.ServiceReference2.SearchableField field, string value) {
             return base.Channel.SearchBooks(field, value);
         }
         
-        public System.Threading.Tasks.Task<BookStoreApp.ServiceReference2.Book[]> SearchBooksAsync(BookStoreApp.ServiceReference2.SearchableField field, string value) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<BookStoreApp.ServiceReference2.Book>> SearchBooksAsync(BookStoreApp.ServiceReference2.SearchableField field, string value) {
             return base.Channel.SearchBooksAsync(field, value);
         }
     }

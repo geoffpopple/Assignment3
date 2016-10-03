@@ -3,3 +3,8 @@
 0485965215,Service-Oriented Architecture: A Field Guide to Integrating XML and Web Services,Thomas Erl,2007,$43.16,1
 0456235975,SOA in Practice: The Art of Distributed System Design,Nicolai M. Josuttis,2007,$24.59,1
 0487965321,SOA Made Simple,Lonneke Dikmans,2012,$13.72,2
+012456,My Book,AIp Standing,2001,$15.00,3
+012457,My Book2,Ip Standing,2001,$15.00,3
+124,reqrg,rqer,345,$33.00,3
+1241,reqrg,rqer,345,$33.00,3
+5454874,hsrth,trhrt,43,$345.00,3

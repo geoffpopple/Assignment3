@@ -18,7 +18,6 @@ namespace BookStoreApp.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookPurchasesvc/PurchaseBooks", ReplyAction="http://tempuri.org/IBookPurchasesvc/PurchaseBooksResponse")]
         BookStoreApp.ServiceReference1.BookPurchaseResponse PurchaseBooks(BookStoreApp.ServiceReference1.BookPurchaseInfo request);
         
-        // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookPurchasesvc/PurchaseBooks", ReplyAction="http://tempuri.org/IBookPurchasesvc/PurchaseBooksResponse")]
         System.Threading.Tasks.Task<BookStoreApp.ServiceReference1.BookPurchaseResponse> PurchaseBooksAsync(BookStoreApp.ServiceReference1.BookPurchaseInfo request);
     }
@@ -90,18 +89,8 @@ namespace BookStoreApp.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        BookStoreApp.ServiceReference1.BookPurchaseResponse BookStoreApp.ServiceReference1.IBookPurchasesvc.PurchaseBooks(BookStoreApp.ServiceReference1.BookPurchaseInfo request) {
+        public BookStoreApp.ServiceReference1.BookPurchaseResponse PurchaseBooks(BookStoreApp.ServiceReference1.BookPurchaseInfo request) {
             return base.Channel.PurchaseBooks(request);
-        }
-        
-        public string PurchaseBooks(float budget, System.Collections.Generic.Dictionary<int, int> items, out bool result) {
-            BookStoreApp.ServiceReference1.BookPurchaseInfo inValue = new BookStoreApp.ServiceReference1.BookPurchaseInfo();
-            inValue.budget = budget;
-            inValue.items = items;
-            BookStoreApp.ServiceReference1.BookPurchaseResponse retVal = ((BookStoreApp.ServiceReference1.IBookPurchasesvc)(this)).PurchaseBooks(inValue);
-            result = retVal.result;
-            return retVal.response;
         }
         
         public System.Threading.Tasks.Task<BookStoreApp.ServiceReference1.BookPurchaseResponse> PurchaseBooksAsync(BookStoreApp.ServiceReference1.BookPurchaseInfo request) {
