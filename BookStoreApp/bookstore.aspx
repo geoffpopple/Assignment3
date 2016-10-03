@@ -81,17 +81,19 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
         <asp:RangeValidator ID="RangeValidator3" runat="server" ControlToValidate="txtStock" ErrorMessage="Must Be Int &gt;0" MaximumValue="9999" MinimumValue="1" Type="Integer" ValidationGroup="Add"></asp:RangeValidator>
         <br />
-        <asp:Button ID="btnDelete" runat="server" Text="Delete" />
+        <asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" ValidationGroup="Delete" />
 &nbsp;<asp:DropDownList ID="dropDelete" runat="server">
             <asp:ListItem>Year</asp:ListItem>
             <asp:ListItem>ID</asp:ListItem>
             <asp:ListItem>Num</asp:ListItem>
         </asp:DropDownList>
-        <asp:TextBox ID="txtDelete" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtDelete" runat="server" ValidationGroup="Delete"></asp:TextBox>
         <br />
+        <asp:CustomValidator ID="CVDelete" runat="server" ControlToValidate="dropDelete" ErrorMessage="CustomValidator" OnServerValidate="ServerValidation_1" ValidationGroup="Delete"></asp:CustomValidator>
         <br />
-        <asp:Button ID="btnSearch" runat="server" Text="Search" />
+        <asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" ValidationGroup="Search" />
         <asp:DropDownList ID="DropDownList1" runat="server">
+            <asp:ListItem Value="Clear">&lt;Clear Search&gt;</asp:ListItem>
             <asp:ListItem>ID</asp:ListItem>
             <asp:ListItem>Name</asp:ListItem>
             <asp:ListItem>Author</asp:ListItem>
@@ -99,6 +101,7 @@
         </asp:DropDownList>
         <asp:TextBox ID="txtSearch" runat="server" Width="105px"></asp:TextBox>
         <br />
+        <asp:CustomValidator ID="CVSearch" runat="server" ControlToValidate="DropDownList1" ErrorMessage="CustomValidator" OnServerValidate="ServerValidation_2" ValidationGroup="Search"></asp:CustomValidator>
         <br />
         Purchase Books<br />
         <br />
@@ -115,7 +118,7 @@
             </ContentTemplate>
         </asp:UpdatePanel>
         <br />
-        <asp:Button ID="btnPurchase" runat="server" Text="Purchase" />
+        <asp:Button ID="btnPurchase" runat="server" Text="Purchase" OnClick="btnPurchase_Click" />
 &nbsp;&nbsp;&nbsp;
         <asp:Label ID="lblResponse" runat="server"></asp:Label>
     </form>
