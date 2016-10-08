@@ -1,4 +1,5 @@
 ﻿using BookStoreApp.ServiceReference2;
+using BookStoreApp.ServiceReference1;
 using System;
 using System.Collections.Generic;
 using System.Web.UI;
@@ -34,7 +35,7 @@ namespace BookStoreApp
             {
                 //Set the number of default controls
                 ViewState[ClickCount] = ViewState[ClickCount] == null ? 1 : ViewState[ClickCount];
-                AddControls();
+                AddLineItems();
 
                 books = mybookstore.GetAllBooks();
                 ViewState[lastBookList] = books;
@@ -55,8 +56,7 @@ namespace BookStoreApp
                 GridView1.DataBind();
             }
             //we did a partial postback so controls in updatelpanel2 are lost, redraw
-            AddControls();
-
+            AddLineItems();
         }
         protected void ServerValidation_2(object source, ServerValidateEventArgs arguments)
         {
@@ -140,25 +140,13 @@ namespace BookStoreApp
             {
 
                 ViewState[ClickCount] = ControlsRequired() + 1;
-                AddControls();
+                AddLineItems();
                 GridView1.DataSource = ViewState[lastBookList];
                 GridView1.DataBind();
             }
         }
 
-        private void AddControls()
-        {
-
-            for (int i = 0; i < ControlsRequired(); i++)
-            {
-                UpdatePanel2.ContentTemplateContainer.Controls.Add(new Label { Text = "Book Number", ID = "lblbookNum" + i });
-                UpdatePanel2.ContentTemplateContainer.Controls.Add(new TextBox { ID = "txtbookNum" + i });
-                UpdatePanel2.ContentTemplateContainer.Controls.Add(new Label { Text = "Amount", ID = "txtAmount" + i });
-                UpdatePanel2.ContentTemplateContainer.Controls.Add(new TextBox { ID = "txtQuantity" + i });
-                UpdatePanel2.ContentTemplateContainer.Controls.Add(new Literal() { Text = "<br/>" });
-
-            }
-        }
+        
 
         private int ControlsRequired()
         {
@@ -197,7 +185,7 @@ namespace BookStoreApp
                 GridView1.DataSource = ViewState[lastBookList];
              }
             GridView1.DataBind();
-            AddControls();
+            AddLineItems();
         }
 
 
@@ -233,7 +221,7 @@ namespace BookStoreApp
             books = mybookstore.GetAllBooks();
             GridView1.DataSource = books;
             GridView1.DataBind();
-            AddControls();
+            AddLineItems();
         }
 
         protected string FindIDfromNum(string num)
@@ -246,33 +234,36 @@ namespace BookStoreApp
         protected void btnPurchase_Click(object sender, EventArgs e)
         {
 
-            AddControls();
-            GridView1.DataSource = ViewState[lastBookList];
-            GridView1.DataBind();
-            // foreach (Control updChild in UpdatePanel2.ContentTemplateContainer.Controls)
-            // {
-            //   if (updChild.ID.Substring(0, 3) == "txt") { }
-            //
-            //}
-            //Extract the entered data from the controls
-            List<lineitems> purchased = new List<lineitems>();
-            int numOnPage=UpdatePanel2.ContentTemplateContainer.Controls.Count;
-            int numControls = (numOnPage - 3) / 5;
-            for (int counter = 1; counter <=numControls; counter++)
-            {
-                TextBox ctl = FindControl("txtBookNum" + counter) as TextBox;
-                TextBox ctl2 = FindControl("txtQuantity" + counter) as TextBox;
-                purchased.Add(new lineitems { Booknum = ctl.Text, many = ctl2.Text });
+            BookPurchaseInfo BpInfo = new ServiceReference1.BookPurchaseInfo();
+            BookPurchaseResponse BpResponse = new ServiceReference1.BookPurchaseResponse();
+            Dictionary<string, int> lineItems = new Dictionary<string, int>();
                 
-            }
-            lblResponse.Text = Convert.ToString(numControls);
-            
-        }
-                    
-    }
+            AddLineItems();
+            int numlines = int.Parse(ViewState[ClickCount].ToString());
 
-    public class lineitems {
-        public string Booknum { get; set; }
-        public string many { get; set; }
+            //parent Control
+            Control placeholder = UpdatePanel2.ContentTemplateContainer.FindControl("PH1");
+            for (int i = 0; i < numlines; i++)
+            {
+                TextBox nb = placeholder.Controls[i].FindControl("txtBookNum") as TextBox;
+                string booknum = FindIDfromNum(nb.Text);
+                TextBox ab = placeholder.Controls[i].FindControl("txtAmount") as TextBox;
+                int qty = Convert.ToInt32(ab.Text);
+                lineItems.Add(booknum, qty);
+               
+            }
+            //TODO: Call the service
+            BookPurchasesvcClient bps = new BookPurchasesvcClient();
+            
+            BpResponse = bps.PurchaseBooks(BpInfo);
+        }
+
+        private void AddLineItems()
+        {
+            for (int i = 0; i < int.Parse(ViewState[ClickCount].ToString()); i++)
+            {
+                PH1.Controls.Add(LoadControl("~/Items.ascx"));
+            }
+        }
     }
 }

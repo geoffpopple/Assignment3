@@ -17,9 +17,6 @@ namespace BookStoreApp.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookPurchasesvc/PurchaseBooks", ReplyAction="http://tempuri.org/IBookPurchasesvc/PurchaseBooksResponse")]
         BookStoreApp.ServiceReference1.BookPurchaseResponse PurchaseBooks(BookStoreApp.ServiceReference1.BookPurchaseInfo request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookPurchasesvc/PurchaseBooks", ReplyAction="http://tempuri.org/IBookPurchasesvc/PurchaseBooksResponse")]
-        System.Threading.Tasks.Task<BookStoreApp.ServiceReference1.BookPurchaseResponse> PurchaseBooksAsync(BookStoreApp.ServiceReference1.BookPurchaseInfo request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -31,12 +28,12 @@ namespace BookStoreApp.ServiceReference1 {
         public float budget;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
-        public System.Collections.Generic.Dictionary<int, int> items;
+        public System.Collections.Generic.Dictionary<string, int> items;
         
         public BookPurchaseInfo() {
         }
         
-        public BookPurchaseInfo(float budget, System.Collections.Generic.Dictionary<int, int> items) {
+        public BookPurchaseInfo(float budget, System.Collections.Generic.Dictionary<string, int> items) {
             this.budget = budget;
             this.items = items;
         }
@@ -91,10 +88,6 @@ namespace BookStoreApp.ServiceReference1 {
         
         public BookStoreApp.ServiceReference1.BookPurchaseResponse PurchaseBooks(BookStoreApp.ServiceReference1.BookPurchaseInfo request) {
             return base.Channel.PurchaseBooks(request);
-        }
-        
-        public System.Threading.Tasks.Task<BookStoreApp.ServiceReference1.BookPurchaseResponse> PurchaseBooksAsync(BookStoreApp.ServiceReference1.BookPurchaseInfo request) {
-            return base.Channel.PurchaseBooksAsync(request);
         }
     }
 }

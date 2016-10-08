@@ -68,6 +68,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Items.ascx" />
     <Content Include="packages.config" />
     <None Include="Service References\ServiceReference1\BookPuchaseSrv.wsdl" />
     <None Include="Service References\ServiceReference2\BookStore.wsdl" />
@@ -133,6 +134,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Items.ascx.cs">
+      <DependentUpon>Items.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Items.ascx.designer.cs">
+      <DependentUpon>Items.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\ServiceReference1\Reference.cs">

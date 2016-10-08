@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Globalization;
 using Book_Purchase_service.ServiceReference1;
+using System.Web.Services;
 
 namespace Book_Purchase_service
 {
    public class BookPuchaseSrv : IBookPurchasesvc    
     {
-        public BookPurchaseResponse PurchaseBooks(BookPurchaseInfo info)
+         public BookPurchaseResponse PurchaseBooks(BookPurchaseInfo info)
         {
             //Get the List of Books from the BookStore service
             BookStoreClient bookstore = new BookStoreClient();
@@ -16,10 +17,10 @@ namespace Book_Purchase_service
             float myBudget = info.budget;
             float remainingCash = myBudget;
             //Create a dictionary from our list to make our life easier using the id as the key
-            Dictionary<int, Book> bookDict = new Dictionary<int, Book>();
+            Dictionary<string, Book> bookDict = new Dictionary<string, Book>();
             foreach (Book book in books)
             {
-                bookDict.Add(Convert.ToInt32(book.Id), book);
+                bookDict.Add(book.Id, book);
             }
 
             //look at our purchses one at a time and check we cam fulfil

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.ServiceModel;
-using System.Web;
 
 namespace Book_Purchase_service
 
@@ -13,6 +10,6 @@ namespace Book_Purchase_service
         [MessageBodyMember]
         public float budget { get; set; }
         [MessageBodyMember]
-        public Dictionary<int, int> items { get; set; }
+        public Dictionary<string, int> items { get; set; }
     }
 }

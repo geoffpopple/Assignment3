@@ -100,7 +100,7 @@ namespace BookStoreService
                             listtodelete = SearchBooks(SearchableField.BookName, value);
                             break;
                         default:
-                            Console.WriteLine("Couldnt math the enumerator");
+                            Console.WriteLine("Couldnt match the enumerator");
                             return false;
                     }
                     if (listtodelete.Count == 0)

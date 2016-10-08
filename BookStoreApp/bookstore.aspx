@@ -113,7 +113,7 @@
             <ContentTemplate>
                 <asp:Button ID="btnMore" runat="server" OnClick="btnMore_Click" Text="More" />
                 <br />
-                &nbsp;
+                <asp:PlaceHolder ID="PH1" runat="server"></asp:PlaceHolder>
                 <br />
             </ContentTemplate>
         </asp:UpdatePanel>
