@@ -15,7 +15,7 @@
         </asp:ScriptManager>
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
-                <asp:GridView ID="grid" runat="server">
+                <asp:GridView ID="grid" runat="server" >
                 </asp:GridView>
             </ContentTemplate>
         </asp:UpdatePanel>

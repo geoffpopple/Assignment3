@@ -312,3 +312,5 @@
 11:40:07,863 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
 11:40:15,381 [BookStoreService.BookStore] INFO - Calling the BookStore Constructor
 11:40:15,381 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:56:37,769 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+22:06:25,415 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
