@@ -7,41 +7,41 @@ using System.Web.UI.WebControls;
 
 namespace BookStoreApp
 {
-    public partial class bookstore : System.Web.UI.Page
+    public partial class Bookstore : Page
     {
-        private List<Book> books;
-        private BookStoreClient mybookstore;
+        private List<Book> _books;
+        private BookStoreClient _mybookstore;
         private const string ClickCount = "ClickCount";
-        private const string lastBookList = "lastBookList";
+        private const string LastBookList = "lastBookList";
 
-        public List<Book> lastBooks
+        public List<Book> LastBooks
         {
             get
                 {
-                if (!(ViewState[lastBookList] is List<Book>))
+                if (!(ViewState[LastBookList] is List<Book>))
                 {
-                    ViewState[lastBookList] = new List<Book>();
+                    ViewState[LastBookList] = new List<Book>();
                 }
 
-                return (List<Book>)ViewState[lastBookList];
+                return (List<Book>)ViewState[LastBookList];
             }
         }
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            mybookstore = new BookStoreClient();
+            _mybookstore = new BookStoreClient();
             if (!Page.IsPostBack)
             {
                 //Set the number of default controls
-                ViewState[ClickCount] = ViewState[ClickCount] == null ? 1 : ViewState[ClickCount];
+                ViewState[ClickCount] = ViewState[ClickCount] ?? 1;
                 AddLineItems();
 
-                books = mybookstore.GetAllBooks();
-                ViewState[lastBookList] = books;
+                _books = _mybookstore.GetAllBooks();
+                ViewState[LastBookList] = _books;
             }
  
-            GridView1.DataSource = books;
+            GridView1.DataSource = _books;
 
             GridView1.DataBind();
         }
@@ -50,9 +50,9 @@ namespace BookStoreApp
         {
             if (Page.IsValid)
             {
-                mybookstore.AddBook(txtID.Text, txtName.Text, txtAuthor.Text, txtYear.Text, txtPrice.Text, txtStock.Text);
-                books = mybookstore.GetAllBooks();
-                GridView1.DataSource = books;
+                _mybookstore.AddBook(txtID.Text, txtName.Text, txtAuthor.Text, txtYear.Text, txtPrice.Text, txtStock.Text);
+                _books = _mybookstore.GetAllBooks();
+                GridView1.DataSource = _books;
                 GridView1.DataBind();
             }
             //we did a partial postback so controls in updatelpanel2 are lost, redraw
@@ -61,7 +61,7 @@ namespace BookStoreApp
         protected void ServerValidation_2(object source, ServerValidateEventArgs arguments)
         {
 
-            if (txtSearch.Text == "" && !(DropDownList1.Text=="Clear"))
+            if (txtSearch.Text == "" && DropDownList1.Text != "Clear")
             {
                 CVSearch.ErrorMessage = "Search Cannot be empty";
                 arguments.IsValid = false;
@@ -71,7 +71,7 @@ namespace BookStoreApp
             {
                 case "Year":
                     {
-                        int result = 0;
+                        int result;
                         bool res = int.TryParse(txtSearch.Text, out result);
                         if ((res == false) || (result <= 0))
                         {
@@ -87,14 +87,14 @@ namespace BookStoreApp
 
         protected void ServerValidation_1(object source, ServerValidateEventArgs arguments)
         {
-            GridView1.DataSource = ViewState[lastBookList];
+            GridView1.DataSource = ViewState[LastBookList];
             GridView1.DataBind();
             switch (dropDelete.Text)
             {
                 case "Year":
                     {
-                        int result = 0;
-                        bool res = int.TryParse(txtDelete.Text, out result);
+                        int result;
+                        var res = int.TryParse(txtDelete.Text, out result);
                         if ((res == false) || (result <= 0))
                         {
                             CVDelete.ErrorMessage = "Invalid Year";
@@ -105,8 +105,8 @@ namespace BookStoreApp
 
                 case "Num":
                     {
-                        int result = 0;
-                        bool res = int.TryParse(txtDelete.Text, out result);
+                        int result;
+                        var res = int.TryParse(txtDelete.Text, out result);
                         if ((res == false) || (result < 0) || (result > GridView1.Rows.Count))
 
                         {
@@ -123,7 +123,7 @@ namespace BookStoreApp
         }
         protected void ServerValidation(object source, ServerValidateEventArgs arguments)
         {
-            GridView1.DataSource = ViewState[lastBookList];
+            GridView1.DataSource = ViewState[LastBookList];
             GridView1.DataBind();
             foreach (GridViewRow s in GridView1.Rows)
             {
@@ -141,7 +141,7 @@ namespace BookStoreApp
 
                 ViewState[ClickCount] = ControlsRequired() + 1;
                 AddLineItems();
-                GridView1.DataSource = ViewState[lastBookList];
+                GridView1.DataSource = ViewState[LastBookList];
                 GridView1.DataBind();
             }
         }
@@ -159,30 +159,30 @@ namespace BookStoreApp
             switch (DropDownList1.Text)
             {
                 case "Year":
-                    books = mybookstore.SearchBooks(SearchableField.Year, txtSearch.Text);
+                    _books = _mybookstore.SearchBooks(SearchableField.Year, txtSearch.Text);
                     break;
                 case "ID":
-                    books = mybookstore.SearchBooks(SearchableField.Id, txtSearch.Text);
+                    _books = _mybookstore.SearchBooks(SearchableField.Id, txtSearch.Text);
                     break;
                 case "Name":
-                    books = mybookstore.SearchBooks(SearchableField.BookName, txtSearch.Text);
+                    _books = _mybookstore.SearchBooks(SearchableField.BookName, txtSearch.Text);
                     break;
                 case "Author":
-                    books = mybookstore.SearchBooks(SearchableField.AuthorName, txtSearch.Text);
+                    _books = _mybookstore.SearchBooks(SearchableField.AuthorName, txtSearch.Text);
                     break;
                 case "Clear":
-                    books = mybookstore.GetAllBooks();
+                    _books = _mybookstore.GetAllBooks();
                     break;
                 default:
-                    books = new List<Book>();
+                    _books = new List<Book>();
                     break;
             }
-           ViewState[lastBookList] = books;
-            GridView1.DataSource = books;
+           ViewState[LastBookList] = _books;
+            GridView1.DataSource = _books;
         }
             else
             {
-                GridView1.DataSource = ViewState[lastBookList];
+                GridView1.DataSource = ViewState[LastBookList];
              }
             GridView1.DataBind();
             AddLineItems();
@@ -197,66 +197,65 @@ namespace BookStoreApp
                 switch (dropDelete.Text)
                 {
                     case "Year":
-                        result = mybookstore.DeleteBook(DeletableField.Year, txtDelete.Text);
+                        result = _mybookstore.DeleteBook(DeletableField.Year, txtDelete.Text);
                         break;
                     case "ID":
-                        result = mybookstore.DeleteBook(DeletableField.Id, txtDelete.Text);
+                        result = _mybookstore.DeleteBook(DeletableField.Id, txtDelete.Text);
                         break;
                     case "Num":
-                        result = mybookstore.DeleteBook(DeletableField.Id, FindIDfromNum(txtDelete.Text));
+                        result = _mybookstore.DeleteBook(DeletableField.Num, txtDelete.Text);
                         break;
                     default:
                         result = false;
                         break;
                 }
-                if (result == true)
-                {
-                    lblResponse.Text = "Success";
-                }
-                else
-                {
-                    lblResponse.Text = "Failure";
-                }
+                lblResponse.Text = result ? "Success" : "Failure";
             }
-            books = mybookstore.GetAllBooks();
-            GridView1.DataSource = books;
+            _books = _mybookstore.GetAllBooks();
+            GridView1.DataSource = _books;
             GridView1.DataBind();
             AddLineItems();
         }
 
         protected string FindIDfromNum(string num)
         {
-            GridView1.DataSource = ViewState[lastBookList];
+            GridView1.DataSource = ViewState[LastBookList];
             GridView1.DataBind();
             return GridView1.Rows[Convert.ToInt32(num)-1].Cells[1].Text;
         }
 
         protected void btnPurchase_Click(object sender, EventArgs e)
         {
+            _books = _mybookstore.GetAllBooks();
+            GridView1.DataSource = _books;
+            GridView1.DataBind();
 
-            BookPurchaseInfo BpInfo = new ServiceReference1.BookPurchaseInfo();
-            BookPurchaseResponse BpResponse = new ServiceReference1.BookPurchaseResponse();
-            Dictionary<string, int> lineItems = new Dictionary<string, int>();
-                
+            var bpInfo = new BookPurchaseInfo();
+            var lineItems = new Dictionary<int, int>();
+
             AddLineItems();
-            int numlines = int.Parse(ViewState[ClickCount].ToString());
+            var numlines = int.Parse(ViewState[ClickCount].ToString());
 
             //parent Control
             Control placeholder = UpdatePanel2.ContentTemplateContainer.FindControl("PH1");
-            for (int i = 0; i < numlines; i++)
+            for (var i = 0; i < numlines; i++)
             {
-                TextBox nb = placeholder.Controls[i].FindControl("txtBookNum") as TextBox;
-                string booknum = FindIDfromNum(nb.Text);
-                TextBox ab = placeholder.Controls[i].FindControl("txtAmount") as TextBox;
-                int qty = Convert.ToInt32(ab.Text);
+                var nb = placeholder.Controls[i].FindControl("txtBookNum") as TextBox;
+                var ab = placeholder.Controls[i].FindControl("txtAmount") as TextBox;
+                if (ab == null || nb == null || ValidateBookId(nb.Text) == 0 || ValidateQty(ab.Text) == 0) break;
+                var booknum = Convert.ToInt32(nb.Text);
+                var qty = Convert.ToInt32(ab.Text);
+
                 lineItems.Add(booknum, qty);
-               
             }
-            //TODO: Call the service
-            BookPurchasesvcClient bps = new BookPurchasesvcClient();
-            
-            BpResponse = bps.PurchaseBooks(BpInfo);
+            var bps = new BookPurchasesvcClient();
+            bpInfo.Budget = ValidateBudget(txtBudget.Text);
+            bpInfo.Items = lineItems;
+            var bpResponse = bps.PurchaseBooks(bpInfo);
+
+            lblResponse.Text =bpResponse.response;
         }
+
 
         private void AddLineItems()
         {
@@ -264,6 +263,33 @@ namespace BookStoreApp
             {
                 PH1.Controls.Add(LoadControl("~/Items.ascx"));
             }
+        }
+
+        private static float ValidateBudget(string budget)
+        {
+            float outVal;
+            var tryConvert = float.TryParse(budget, out outVal);
+            return tryConvert ? outVal : 0f;
+
+        }
+
+        private static int ValidateQty(string value)
+        {
+            int outVal;
+            //catch cruddy input
+            var tryConvert = int.TryParse(value, out outVal);
+            //catch where  Qty input <0
+            outVal = (outVal < 0) ? 0 : outVal;
+            return tryConvert ? outVal : 0;
+
+        }
+        private  int ValidateBookId(string value)
+        {
+            int outVal;
+            //catch cruddy input
+            int.TryParse(value, out outVal);
+            //catch where  Qty input <0 or greather than rows in the grid
+            return (outVal < 0 || outVal > _mybookstore.GetAllBooks().Count) ? 0 : outVal;
         }
     }
 }

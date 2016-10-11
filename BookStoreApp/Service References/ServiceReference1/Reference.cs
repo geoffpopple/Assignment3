@@ -25,17 +25,17 @@ namespace BookStoreApp.ServiceReference1 {
     public partial class BookPurchaseInfo {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        public float budget;
+        public float Budget;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
-        public System.Collections.Generic.Dictionary<string, int> items;
+        public System.Collections.Generic.Dictionary<int, int> Items;
         
         public BookPurchaseInfo() {
         }
         
-        public BookPurchaseInfo(float budget, System.Collections.Generic.Dictionary<string, int> items) {
-            this.budget = budget;
-            this.items = items;
+        public BookPurchaseInfo(float Budget, System.Collections.Generic.Dictionary<int, int> Items) {
+            this.Budget = Budget;
+            this.Items = Items;
         }
     }
     

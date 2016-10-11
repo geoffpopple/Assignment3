@@ -25,7 +25,9 @@ namespace BookStoreService
         [EnumMember]
         Year,
         [EnumMember]
-        Id
+        Id,
+        [EnumMember]
+        Num
     }
 
     [DataContract]
