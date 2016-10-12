@@ -1,11 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
+/*/////////////////////////////////
+///    Geoff Popple S4208241    ///
+///    INFS 3204:Assignmet 3    ///
+/////////////////////////////////*/
+
+//Book.cs
+
+//Task 1 Required Class
 using System.Runtime.Serialization;
 
 namespace BookStoreService
 {
     [DataContract]
-    //comment
+    //used to restrict the fields that can be searched on
     public enum SearchableField
     {
         [EnumMember]
@@ -17,7 +24,7 @@ namespace BookStoreService
         [EnumMember]
         AuthorName
     }
-
+    //used to restrict the fields that can be the source of a delete
     public enum DeletableField
     {
         [EnumMember]
@@ -30,10 +37,10 @@ namespace BookStoreService
         Num
     }
 
+    //Task 1.1.1
     [DataContract]
-    public class Book:IEqualityComparer<Book>
+    public class Book
     {
-
         [DataMember]
         public string Id { get; set; }
         [DataMember]
@@ -46,24 +53,5 @@ namespace BookStoreService
         public float Price { get; set; }
         [DataMember]
         public int Stock { get; set; }
-
-        public bool Equals(Book x, Book y)
-        {
-            if (object.ReferenceEquals(x, y))
-            {
-                return true;
-            }
-            if (object.ReferenceEquals(x, null) ||
-                object.ReferenceEquals(y, null))
-            {
-                return false;
-            }
-            return x.Id == y.Id;
-        }
-
-        public int GetHashCode(Book obj)
-        {
-            return obj?.Id.GetHashCode() ?? 0;
-        }
     }
 }

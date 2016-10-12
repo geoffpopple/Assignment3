@@ -1,7 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿/*/////////////////////////////////
+///    Geoff Popple S4208241    ///
+///    INFS 3204:Assignmet 3    ///
+/////////////////////////////////*/
+
+//BookPurchaseResponse.cs
+
+//Task 3 required contracts
+//using message contracts
+
 using System.ServiceModel;
 
 namespace Book_Purchase_service
@@ -13,13 +19,13 @@ namespace Book_Purchase_service
         
         public BookPurchaseResponse(bool result,string response)
         {
-            this.response = response;
-            this.result = result;
+            Response = response;
+            Result = result;
         }
 
         [MessageBodyMember]
-        public bool result { get; set; }
+        public bool Result { get; set; }
         [MessageBodyMember]
-        public string response { get; set; }
+        public string Response { get; set; }
     }
 }

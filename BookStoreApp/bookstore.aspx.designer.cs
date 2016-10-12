@@ -10,7 +10,7 @@
 namespace BookStoreApp {
     
     
-    public partial class bookstore {
+    public partial class Bookstore {
         
         /// <summary>
         /// form1 control.

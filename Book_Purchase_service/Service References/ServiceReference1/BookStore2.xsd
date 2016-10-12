@@ -22,6 +22,7 @@
       <xs:enumeration value="BookName" />
       <xs:enumeration value="Year" />
       <xs:enumeration value="Id" />
+      <xs:enumeration value="Num" />
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="DeletableField" nillable="true" type="tns:DeletableField" />

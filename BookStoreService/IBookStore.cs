@@ -1,6 +1,16 @@
-﻿using System.Collections.Generic;
+﻿/*/////////////////////////////////
+///    Geoff Popple S4208241    ///
+///    INFS 3204:Assignmet 3    ///
+/////////////////////////////////*/
+
+//IBookstore.cs
+
+//Task 1 Helper functions and methods
+using System.Collections.Generic;
 using System.ServiceModel;
 
+//Interface to support Service Contract
+//Implemented in BookStore.svc.cs
 namespace BookStoreService
 {
     [ServiceContract]

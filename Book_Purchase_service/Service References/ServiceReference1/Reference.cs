@@ -150,6 +150,9 @@ namespace Book_Purchase_service.ServiceReference1 {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
         Id = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Num = 3,
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]

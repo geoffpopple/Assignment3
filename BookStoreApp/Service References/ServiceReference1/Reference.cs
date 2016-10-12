@@ -45,17 +45,17 @@ namespace BookStoreApp.ServiceReference1 {
     public partial class BookPurchaseResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        public string response;
+        public string Response;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
-        public bool result;
+        public bool Result;
         
         public BookPurchaseResponse() {
         }
         
-        public BookPurchaseResponse(string response, bool result) {
-            this.response = response;
-            this.result = result;
+        public BookPurchaseResponse(string Response, bool Result) {
+            this.Response = Response;
+            this.Result = Result;
         }
     }
     
