@@ -92,7 +92,7 @@
         <asp:CustomValidator ID="CVDelete" runat="server" ControlToValidate="dropDelete" ErrorMessage="CustomValidator" OnServerValidate="ServerValidation_1" ValidationGroup="Delete"></asp:CustomValidator>
         <br />
         <asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" ValidationGroup="Search" />
-        <asp:DropDownList ID="DropDownList1" runat="server">
+        <asp:DropDownList ID="DropSearch" runat="server">
             <asp:ListItem Value="Clear">&lt;Clear Search&gt;</asp:ListItem>
             <asp:ListItem>ID</asp:ListItem>
             <asp:ListItem>Name</asp:ListItem>
@@ -101,7 +101,7 @@
         </asp:DropDownList>
         <asp:TextBox ID="txtSearch" runat="server" Width="105px"></asp:TextBox>
         <br />
-        <asp:CustomValidator ID="CVSearch" runat="server" ControlToValidate="DropDownList1" ErrorMessage="CustomValidator" OnServerValidate="ServerValidation_2" ValidationGroup="Search"></asp:CustomValidator>
+        <asp:CustomValidator ID="CVSearch" runat="server" ControlToValidate="DropSearch" ErrorMessage="CustomValidator" OnServerValidate="ServerValidation_2" ValidationGroup="Search"></asp:CustomValidator>
         <br />
         Purchase Books<br />
         <br />

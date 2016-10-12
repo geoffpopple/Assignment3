@@ -412,3 +412,36 @@
 07:47:45,079 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
 07:47:45,094 [BookStoreService.BookStore] WARN - Unable to delete Books
 07:47:45,105 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:07:56,827 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:08:44,919 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:08:44,926 [BookStoreService.BookStore] INFO - Adding book to the booklist
+21:08:44,927 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for writing 
+21:08:46,698 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:09:00,051 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:09:00,055 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for writing 
+21:09:01,725 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:10:23,507 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:10:35,315 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:10:35,462 [BookStoreService.BookStore] WARN - empty Book List retuned
+21:10:41,405 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:10:41,421 [BookStoreService.BookStore] WARN - empty Book List retuned
+21:10:46,241 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:10:46,258 [BookStoreService.BookStore] WARN - empty Book List retuned
+21:11:43,725 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:12:07,531 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:12:32,873 [BookStoreService.BookStore] WARN - empty Book List retuned
+21:12:52,188 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:15:20,645 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:15:36,888 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:17:00,817 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:17:14,958 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:17:18,866 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:17:26,966 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:18:08,427 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:18:08,458 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:18:08,471 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:18:10,491 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:18:29,596 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:18:29,609 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:18:29,616 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 
+21:18:29,633 [BookStoreService.BookStore] INFO - opening the filestream \\mac\home\documents\visual studio 2015\Projects\Assignment3\BookStoreService\books.txt for reading 

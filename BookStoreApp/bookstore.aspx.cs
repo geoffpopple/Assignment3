@@ -28,12 +28,12 @@ namespace BookStoreApp
         //local vars
         private List<Book> _books;  //fairly sure i could combine this with the session state var
         private BookStoreClient _mybookstore;
-        
+
         //Session state variables
         private const string ClickCount = "ClickCount";
         private const string LastBookList = "lastBookList";
 
-        
+
 
         //Set up the gridview and keep track of how many times the
         //more button has been clicked
@@ -70,7 +70,6 @@ namespace BookStoreApp
             AddLineItems();
         }
 
-        
         //Button for more purchase rows
         protected void btnMore_Click(object sender, EventArgs e)
 
@@ -84,42 +83,40 @@ namespace BookStoreApp
             }
         }
 
-        
-
-
         //function for seaching -- only works if valid data
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            if (Page.IsValid) { 
-            switch (dropDelete.Text)
+            if (Page.IsValid)
             {
-                case "Year":
-                    _books = _mybookstore.SearchBooks(SearchableField.Year, txtSearch.Text);
-                    break;
-                case "ID":
-                    _books = _mybookstore.SearchBooks(SearchableField.Id, txtSearch.Text);
-                    break;
-                case "Name":
-                    _books = _mybookstore.SearchBooks(SearchableField.BookName, txtSearch.Text);
-                    break;
-                case "Author":
-                    _books = _mybookstore.SearchBooks(SearchableField.AuthorName, txtSearch.Text);
-                    break;
-                case "Clear":
-                    _books = _mybookstore.GetAllBooks();
-                    break;
-                default:
-                     Logger.Info("{dropDelete.text} entered");
-                    _books = new List<Book>();
-                    break;
+                switch (DropSearch.Text)
+                {
+                    case "Year":
+                        _books = _mybookstore.SearchBooks(SearchableField.Year, txtSearch.Text);
+                        break;
+                    case "ID":
+                        _books = _mybookstore.SearchBooks(SearchableField.Id, txtSearch.Text);
+                        break;
+                    case "Name":
+                        _books = _mybookstore.SearchBooks(SearchableField.BookName, txtSearch.Text);
+                        break;
+                    case "Author":
+                        _books = _mybookstore.SearchBooks(SearchableField.AuthorName, txtSearch.Text);
+                        break;
+                    case "Clear":
+                        _books = _mybookstore.GetAllBooks();
+                        break;
+                    default:
+                        Logger.Info("{dropDelete.text} entered");
+                        _books = new List<Book>();
+                        break;
+                }
+                ViewState[LastBookList] = _books;
+                GridView1.DataSource = _books;
             }
-           ViewState[LastBookList] = _books;
-            GridView1.DataSource = _books;
-        }
             else
             {
                 GridView1.DataSource = ViewState[LastBookList];
-             }
+            }
             GridView1.DataBind();
             AddLineItems();
         }
@@ -223,13 +220,13 @@ namespace BookStoreApp
         protected void ServerValidation_2(object source, ServerValidateEventArgs arguments)
         {
 
-            if (txtSearch.Text == "" && DropDownList1.Text != "Clear")
+            if (txtSearch.Text == "" && DropSearch.Text != "Clear")
             {
                 CVSearch.ErrorMessage = "Search Cannot be empty";
                 arguments.IsValid = false;
             }
 
-            switch (DropDownList1.Text)
+            switch (DropSearch.Text)
             {
                 case "Year":
                     {
@@ -244,7 +241,7 @@ namespace BookStoreApp
                     }
                 default:
                     {
-                        Logger.Info("{DropDownList1.Text} entered");
+                        Logger.Info("{DropSearch.Text} entered");
                         break;
                     }
             }
